@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --dominant: #ffab18;
+  --complementary: #0a278f;
+  --accent: #343a40;
+  --white: #ffffff;
+  --dark: #0c0c0c;
+  --gradientColor: linear-gradient(
+    45deg,
+    var(--complementary),
+    var(--dominant)
+  );
+
+  --readex: "ReadexPro-Medium", sans-serif;
+  --readexBold: "ReadexPro-Bold", sans-serif;
+  --arial: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "ReadexPro-Medium";
+  src: url("../font/readex-font/ReadexPro-Medium.ttf");
+}
+
+@font-face {
+  font-family: "ReadexPro-Bold";
+  src: url("../font/readex-font/ReadexPro-bold.ttf");
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+body {
+  background: url("../picture/page-bg.jpg") no-repeat fixed center;
+  background-size: cover;
+  font-family: var(--readex);
+}
+
+:focus {
+  outline: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+i,
+em,
+cite {
+  font-style: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.logo {
+  font-family: var(--readexBold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.top-info p {
+  font: normal normal 1.5rem / normal var(--readex);
+}
+
+.top-info h1 {
+  font: normal bold 4rem / normal var(--readexBold);
+  margin: 0.5rem 0;
+}
+
+.countdown-timer ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.countdown-timer ul li {
+  margin-right: 5rem;
+  text-align: center;
+}
+
+.countdown-timer ul li h3 {
+  font: normal normal 5rem / normal var(--readex);
+}
+
+.countdown-timer ul li span {
+  font-size: 1.1rem;
+}
+
+fieldset {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: none;
+}
+
+fieldset input {
+  background: transparent;
+  border: thin solid grey;
+  padding: 1rem;
+  color: var(--white);
+}
+
+fieldset button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.3rem;
+  font-family: var(--readex);
+  padding: 1.2rem 2.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+fieldset button > i {
+  margin-left: 0.5rem;
+}
+
+fieldset button > img {
+  filter: invert();
+  width: 15px; 
+  height: 15px;
+}
+
+fieldset button > img,
+fieldset button > i {
+  transition: margin-left 350ms ease;
+}
+
+fieldset button:hover i {
+  margin-left: 1rem;
+}
+
+fieldset button:hover img {
+  margin-left: 0.75rem;
+}
